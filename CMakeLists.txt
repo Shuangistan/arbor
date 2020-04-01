@@ -267,13 +267,7 @@ if(ARB_WITH_GPU)
         "$<$<COMPILE_LANGUAGE:CUDA>:-Xcudafe=--diag_suppress=unsigned_compare_with_zero>")
 
     target_compile_options(arbor-private-deps INTERFACE
-        $<$<COMPILE_LANGUAGE:CUDA>:-gencode=arch=compute_35,code=sm_35>)
-    target_compile_options(arbor-private-deps INTERFACE
-        $<$<COMPILE_LANGUAGE:CUDA>:-gencode=arch=compute_37,code=sm_37>)
-    target_compile_options(arbor-private-deps INTERFACE
-        $<$<COMPILE_LANGUAGE:CUDA>:-gencode=arch=compute_60,code=sm_60>)
-    target_compile_options(arbor-private-deps INTERFACE
-        $<$<COMPILE_LANGUAGE:CUDA>:-gencode=arch=compute_70,code=sm_70>)
+        $<$<COMPILE_LANGUAGE:CUDA>:-gencode=arch=compute_53,code=sm_53>)
 endif()
 
 # Use libunwind if requested for pretty printing stack traces
